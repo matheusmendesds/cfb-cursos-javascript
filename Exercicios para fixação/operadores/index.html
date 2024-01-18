@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF Else e Switch</title>
+    <style>
+        body{
+            background-color:rgba(0, 255, 255, 0.336);
+        }
+
+        div > div#calc {
+            border: 3px solid black;
+        }
+
+        div > div#calc > div > button {
+            width: 35px ;
+            margin: 2px;
+        }
+
+        .quadrado{
+            border: 1px solid black;
+            margin: 20px;
+            width: 50px;
+            height: 50px;
+            padding: 40px;
+            display: inline-flex;
+            text-align: center;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Exercícios</h2>
+        <p>Exercicio sobre aula 1 até 20 do Curso CFB em Javascript</p>
+        <button type="button" id="botao" onclick="aparecer()">Assuntos das aulas</button>
+        <button type="button" id="fechar" onclick="sumir()" style="display: none;">Fechar</button>
+        <ol id="lista" style="display: none;">
+            <li>Let,var e const</li>
+            <li><abbr title="+ - * / % ++ --">Operadores Matemáticos</abbr></li>
+            <li><abbr title="== != > < => =<">Operadores Relacionais</abbr></li>
+            <li><abbr title="&& || !">Operadores Lógicos</abbr></li>
+            <li><abbr title="& | ^ >> <<">Operadores Bitwise</abbr></li>
+            <li>Pré e pós Incremento</li>
+            <li>Operadores Ternário e Typeof</li>
+            <li>IF e ELSE</li>
+            <li>Switch case</li>
+            <li>Loop For em Javascript</li>
+            <li>For in e For of</li>
+            <li>While (While e do While)</li>
+            <li>Declarações Break e Continue</li>
+        </ol>
+    </div>    
+    <div>
+        <h2>IF Else e Switch</h2>
+        <h3><p>Insira Números:</p></h3>
+        <p>
+            Some dois número de 1 a 100(If e Else):<input type="number" name="num" id="n1" min="0" max="100">
+            <input type="number" name="ndois" id="n2" min="0" max="100">
+            <input type="submit" value="enviar" onclick="testeum()">
+        </p>
+        <p>
+            Escolha um número de 1 a 5 (Switch):<input type="number" name="numero" id="n3" size="10" min="1" max="30">
+            <input type="submit" value="enviar" onclick="testedois()">
+        </p>
+        
+        
+    </div>  
+    <div>
+        <div class="quadrado" id="q1"><p>If e Else</p></div>
+        <div class="quadrado" id="q2"><p>Switch case</p></div>
+        
+        
+    </div>
+
+ <footer><a href="pag002.html">Pagina 2</a></footer>   
+<script>
+    function aparecer(){
+        let l = document.getElementById('lista')
+        let b1 = document.getElementById('botao').style.display='none'
+        let b = document.getElementById('fechar').style.display='block'
+        l.style.display='block'
+    }
+    function sumir(){
+        let l = document.getElementById('lista')
+        let b = document.getElementById('fechar').style.display='none'
+        l.style.display='none'
+        let b1 = document.getElementById('botao').style.display='block'
+    }
+    function testeum(){
+        let q = document.getElementById('q1')
+        let n1 = (document.getElementById('n1'))
+        let n2 = (document.getElementById('n2'))
+        let x = Number(n1.value)
+        let y = Number(n2.value)
+        let res = (x + y)
+        if (res <= 1) {
+            alert('ERRO! A soma precisa ser maior que 1!')
+        } else if (res > 100) {
+            alert('ERRO! A soma precisa ser menor que 100!')
+        } else if (res > 50) {
+            q.style.backgroundColor='blue'
+            q.innerHTML = `A soma é igual a ${res}`
+        } else {
+            q.style.backgroundColor='red'
+            q.innerHTML = `A soma é igual a ${res}`
+        }
+        
+    }    
+    function testedois(){
+        let q2 = document.getElementById('q2')
+        let res = document.getElementById('n3').value;
+        //Switch só aceita casos que usem True ou False
+        switch(true){
+            case res == 1:
+                q2.style.backgroundColor='green'
+                q2.innerHTML = "Você escolheu 1!"
+                break
+            case res == 2:
+                q2.style.backgroundColor='red'
+                q2.innerHTML = "Você escolheu 2!"
+                break
+            case res == 3:
+                q2.style.backgroundColor='yellow'
+                q2.innerHTML = "Você escolheu 3!"
+                break
+            case res == 4:
+                q2.style.backgroundColor='grey'
+                q2.innerHTML = "Você escolheu 4!"
+                break    
+            case res == 5:
+                q2.style.backgroundColor='white'
+                q2.innerHTML = "Você escolheu 5!"
+                break
+            
+            default:
+                alert("ERRO! escolha um número de 1 a 5")
+                break    
+
+        }
+    }
+    
+</script>
+</body>
+
+</html>

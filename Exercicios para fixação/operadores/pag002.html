@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For e While</title>
+    <style>
+        body{
+            background-color:rgba(0, 255, 255, 0.336);
+        }
+
+        div > div#calc {
+            border: 3px solid black;
+        }
+
+        div > div#calc > div > button {
+            width: 35px ;
+            margin: 2px;
+        }
+
+        .quadrado{
+            border: 1px solid black;
+            margin: 20px;
+            width: 50px;
+            height: 50px;
+            padding: 40px;
+            display: inline-flex;
+            text-align: center;
+            
+        }
+
+    </style>    
+</head>
+<body>
+    <div>
+        <h2>Exercícios</h2>
+        <p>Exercicio sobre aula 1 até 20 do Curso CFB em Javascript</p>
+        <button type="button" id="botao" onclick="aparecer()">Assuntos das aulas</button>
+        <button type="button" id="fechar" onclick="sumir()" style="display: none;">Fechar</button>
+        <ol id="lista" style="display: none;">
+            <li>Let,var e const</li>
+            <li><abbr title="+ - * / % ++ --">Operadores Matemáticos</abbr></li>
+            <li><abbr title="== != > < => =<">Operadores Relacionais</abbr></li>
+            <li><abbr title="&& || !">Operadores Lógicos</abbr></li>
+            <li><abbr title="& | ^ >> <<">Operadores Bitwise</abbr></li>
+            <li>Pré e pós Incremento</li>
+            <li>Operadores Ternário e Typeof</li>
+            <li>IF e ELSE</li>
+            <li>Switch case</li>
+            <li>Loop For em Javascript</li>
+            <li>For in e For of</li>
+            <li>While (While e do While)</li>
+            <li>Declarações Break e Continue</li>
+        </ol>
+    </div>  
+    <div>
+        <h2>While e FOR</h2>
+    </div>
+    <footer><a href="index.html">Pagina 1</a></footer>
+</body>
+<script>
+    function aparecer(){
+        let l = document.getElementById('lista')
+        let b1 = document.getElementById('botao').style.display='none'
+        let b = document.getElementById('fechar').style.display='block'
+        l.style.display='block'
+    }
+    function sumir(){
+        let l = document.getElementById('lista')
+        let b = document.getElementById('fechar').style.display='none'
+        l.style.display='none'
+        let b1 = document.getElementById('botao').style.display='block'
+    }
+</script>    
+</html>

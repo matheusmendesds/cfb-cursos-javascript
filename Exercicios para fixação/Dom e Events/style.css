@@ -1,0 +1,75 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: wheat;
+    margin-left: 1px;
+}
+.bandeira{
+    width: 120px;
+    height: 25px;
+    
+}
+#a1{
+    background-color: black;
+}
+#a2{
+    background-color: red;
+}
+#a3{
+    background-color: yellow;
+}
+#ar1{
+    background-color: rgba(30, 221, 255, 0.712);
+}
+#ar2{
+    background-color: white;
+}
+#ar3{
+    background-color: rgba(30, 221, 255, 0.712);
+}
+#it1{
+    background-color: green;
+    width: 40px;
+    height: 75px;
+}
+#it2{
+    background-color: white;
+    width: 40px;
+    height: 75px;
+}
+#it3{
+    background-color: red;
+    width: 40px;
+    height: 75px;
+}
+#b3{
+    display: flex;
+    
+}
+.container{
+    display: flex;
+    gap: 20px;
+   
+}
+.formulario{
+    padding: 10px;
+
+}
+table,
+td {
+  border: 1px solid #333;
+}
+th,tr,td{
+    padding: 5px;
+}
+
+thead,
+tfoot {
+  background-color: #333;
+  color: #fff;
+}
+
+
